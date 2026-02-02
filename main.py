@@ -2,7 +2,7 @@ import os
 
 import pandas as pd
 
-from src.course_api import get_stock_prices_yahoo, get_transaction_amount
+from src.course_api import get_transaction_amount, get_stock_prices_alphavantage, get_stock_prices_yahoo
 from src.reports import spending_by_category
 from src.services import find_number
 from src.utils import print_hi, saves_in_json
@@ -22,8 +22,8 @@ def cards():
     data_report = input()
     dict_cards = cards_unique(dict_xlsx, data_report)
     top_transactions = get_top_transactions(dict_xlsx, data_report)
-    get_course = get_transaction_amount(dict_xlsx)
-    get_stock = get_stock_prices_yahoo()
+    get_course = get_transaction_amount(dict_xlsx, data_report)
+    get_stock = get_stock_prices_alphavantage(), get_stock_prices_yahoo()
     return hi, dict_cards, top_transactions, get_course, get_stock
 
 
@@ -72,3 +72,8 @@ if __name__ == "__main__":
     print(record_json())
     # формирование TXT-файла - отчет по категориям
     print(record_txt("Такси", "30.12.2021"))
+    # data_report = '13.10.2020'
+    # dict_xlsx = read_xlsx_file(abs_path_xlsx)
+    # #print(get_top_transactions(dict_xlsx, data_report))
+    # symbols = ["MSFT", "TSLA"]
+    # print(get_transaction_amount(symbols))

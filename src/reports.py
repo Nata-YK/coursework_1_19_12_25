@@ -79,7 +79,7 @@ def report_writer(filename: Optional[str] = None):
     return decorator
 
 
-@report_writer('file_report.txt')
+@report_writer("file_report.txt")
 def spending_by_category(transactions: pd.DataFrame, category: str, date: Optional[str] = None) -> pd.DataFrame:
     """
     Возвращает траты по заданной категории за последние три месяца

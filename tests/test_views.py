@@ -30,7 +30,6 @@ def test_read_xlsx_file_empty() -> None:
     assert read_xlsx_file(file1_path) == []
 
 
-
 def test_cards_emply(dict_for_test_empty):
     """Тест на пустые данные"""
     result = cards_unique([])
@@ -39,12 +38,12 @@ def test_cards_emply(dict_for_test_empty):
 
 def test_analyze_with_date_filter(sample_transactions):
     """Тест анализа с фильтром по дате, проверка количества карт"""
-    result = cards_unique(sample_transactions, '27.12.2021')
+    result = cards_unique(sample_transactions, "27.12.2021")
 
     assert "cards" in result
     assert len(result["cards"]) == 2
 
-    #Находим карты
+    # Находим карты
     card_7197 = next((c for c in result["cards"] if c["last_digits"] == "7197"), None)
     card_5091 = next((c for c in result["cards"] if c["last_digits"] == "5091"), None)
 
@@ -76,7 +75,7 @@ def test_empty_data(dict_for_test_empty):
 
 def test_with_date_filter(sample_transactions):
     """Тест с фильтром по дате"""
-    result = get_top_transactions(sample_transactions, '27.12.2021')
+    result = get_top_transactions(sample_transactions, "27.12.2021")
 
     # Должно быть 3 транзакции (в период 01.12-27.12)
     assert len(result["top_transactions"]) == 4

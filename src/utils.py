@@ -2,8 +2,7 @@ import json
 import datetime
 
 
-
-def print_hi()-> str:
+def print_hi() -> str:
     """
     Функция приветствия
     """
@@ -12,11 +11,11 @@ def print_hi()-> str:
     hour = hour_now.hour
     minute = hour_now.minute
     total_minutes = hour * 60 + minute
-    if 5*60 <= hour < 12*60:
+    if 5 * 60 <= total_minutes <= 12 * 60:
         str_val = "Доброе утро"
-    elif 12*60 < hour < 18*60:
+    elif 12 * 60 <= total_minutes <= 18 * 60:
         str_val = "Добрый день"
-    elif 18*60 < hour < 21*60:
+    elif 18 * 60 <= total_minutes <= 21 * 60:
         str_val = "Добрый вечер"
     else:
         str_val = "Доброй ночи"
@@ -35,4 +34,3 @@ def saves_in_json(transactions, output_file):
         print(f"Ошибка при сохранении файла: {e}")
 
         return transactions
-

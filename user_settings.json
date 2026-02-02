@@ -1,105 +1,109 @@
 [
     [
         {
-            "greeting": "Доброй ночи, Наталья!"
+            "greeting": "Доброй ночи, Natalya!"
         },
         {
             "cards": [
                 {
                     "last_digits": "7197",
-                    "total_spent": 2478419.56,
-                    "cashback": 22513.0
-                },
-                {
-                    "last_digits": "5091",
-                    "total_spent": 17367.5,
-                    "cashback": 158.0
+                    "total_spent": 77703.09,
+                    "cashback": 735.0
                 },
                 {
                     "last_digits": "4556",
-                    "total_spent": 1017972.02,
-                    "cashback": 9758.0
+                    "total_spent": 1839.2,
+                    "cashback": 16.0
                 }
             ]
         },
         {
             "top_transactions": [
                 {
-                    "date": "21.03.2019 17:01:37",
-                    "amount": 190044.51,
+                    "date": "22.12.2020 12:25:18",
+                    "amount": 42577.33,
                     "category": "Переводы",
                     "description": "Перевод Кредитная карта. ТП 10.2 RUR"
                 },
                 {
-                    "date": "23.10.2018 12:26:14",
-                    "amount": 177506.03,
-                    "category": "Переводы",
-                    "description": "Перевод Кредитная карта. ТП 10.2 RUR"
+                    "date": "22.12.2020 15:36:58",
+                    "amount": 40137.82,
+                    "category": "Сервис",
+                    "description": "Zoom"
                 },
                 {
-                    "date": "13.02.2019 18:04:06",
-                    "amount": 152500.0,
-                    "category": "Образование",
-                    "description": "СКОЛКОВО"
+                    "date": "17.12.2020 14:06:11",
+                    "amount": 15000.0,
+                    "category": "Автоуслуги",
+                    "description": "Kia Odisseya-Spb"
                 },
                 {
-                    "date": "16.01.2019 12:11:11",
-                    "amount": 152500.0,
-                    "category": "Образование",
-                    "description": "СКОЛКОВО"
+                    "date": "14.12.2020 13:18:02",
+                    "amount": 3360.0,
+                    "category": "Сервис",
+                    "description": "OOO Sdehk-Alva"
                 },
                 {
-                    "date": "30.11.2018 17:54:41",
-                    "amount": 152500.0,
-                    "category": "Образование",
-                    "description": "СКОЛКОВО"
+                    "date": "08.12.2020 20:15:24",
+                    "amount": 2214.7,
+                    "category": "ЖКХ",
+                    "description": "ЖКУ Дом"
                 }
             ]
         },
         {
             "currency_rates": [
                 {
+                    "currency": "CNY",
+                    "rate": 11.4582
+                },
+                {
                     "currency": "EUR",
-                    "rate": 90.9329
+                    "rate": 91.3487
                 },
                 {
                     "currency": "TRY",
-                    "rate": 17.6644
-                },
-                {
-                    "currency": "CNY",
-                    "rate": 10.9751
+                    "rate": 9.7819
                 },
                 {
                     "currency": "USD",
-                    "rate": 76.5519
+                    "rate": 74.8392
                 }
             ]
         },
-        {
-            "stock_prices": [
-                {
-                    "stock": "AAPL",
-                    "price": 258.27
-                },
-                {
-                    "stock": "AMZN",
-                    "price": 244.68
-                },
-                {
-                    "stock": "GOOGL",
-                    "price": 334.55
-                },
-                {
-                    "stock": "MSFT",
-                    "price": 480.58
-                },
-                {
-                    "stock": "TSLA",
-                    "price": 430.9
-                }
-            ]
-        }
+        [
+            {
+                "stock_prices": []
+            },
+            {
+                "stock_prices": [
+                    {
+                        "stock": "AAPL",
+                        "price": 270.01
+                    },
+                    {
+                        "stock": "AMZN",
+                        "price": 242.96
+                    },
+                    {
+                        "stock": "GOOGL",
+                        "price": 343.69
+                    },
+                    {
+                        "stock": "MSFT",
+                        "price": 423.37
+                    },
+                    {
+                        "stock": "TSLA",
+                        "price": 421.81
+                    },
+                    {
+                        "stock": "ORCL",
+                        "price": 160.06
+                    }
+                ]
+            }
+        ]
     ],
     {
         "Найдено 31 номер(ов)": [

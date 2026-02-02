@@ -107,19 +107,15 @@ def cards_unique(dict_xlsx, date_now=None):
 
             # Извлекаем последние 4 цифры карты
             card_str = str(cards_number)
-            if '*' in card_str:
-                last_digits = card_str.split('*')[-1]
+            if "*" in card_str:
+                last_digits = card_str.split("*")[-1]
             else:
                 # Берем последние 4 символа, если их меньше - дополняем
                 last_digits = card_str[-4:] if len(card_str) >= 4 else card_str.zfill(4)[-4:]
 
             # Используем последние 4 цифры как ключ, а не полный номер карты
             if last_digits not in cards_dict:
-                cards_dict[last_digits] = {
-                    "last_digits": last_digits,
-                    "total_spent": 0,
-                    "cashback": 0
-                }
+                cards_dict[last_digits] = {"last_digits": last_digits, "total_spent": 0, "cashback": 0}
 
             # Суммируем потраченное
             cards_dict[last_digits]["total_spent"] += abs(amount)
@@ -128,11 +124,13 @@ def cards_unique(dict_xlsx, date_now=None):
         # Преобразуем в нужный формат
     result_cards = []
     for card_data in cards_dict.values():
-        result_cards.append({
-            "last_digits": card_data["last_digits"],
-            "total_spent": round(card_data["total_spent"], 2),
-            "cashback": round(card_data["cashback"], 2)
-        })
+        result_cards.append(
+            {
+                "last_digits": card_data["last_digits"],
+                "total_spent": round(card_data["total_spent"], 2),
+                "cashback": round(card_data["cashback"], 2),
+            }
+        )
 
     return {"cards": result_cards}
 
@@ -144,11 +142,12 @@ def get_top_transactions(dict_xlsx, date_now=None, limit=5):
         return {"top_transactions": []}
 
     # Определяем период
-    if date_now:
+    if not date_now:
+        start_date = None
+        end_date = None
+    else:
         end_date = datetime.strptime(date_now, "%d.%m.%Y")
         start_date = datetime(end_date.year, end_date.month, 1)
-    else:
-        start_date = end_date = None
 
     # Фильтруем транзакции
     filtered = []
@@ -175,11 +174,13 @@ def get_top_transactions(dict_xlsx, date_now=None, limit=5):
     # Формируем результат
     top = []
     for trans in sorted_trans[:limit]:
-        top.append({
-            "date": trans.get("Дата операции", ""),
-            "amount": abs(trans.get("Сумма платежа", 0)),
-            "category": trans.get("Категория", ""),
-            "description": trans.get("Описание", "")
-        })
+        top.append(
+            {
+                "date": trans.get("Дата операции", ""),
+                "amount": abs(trans.get("Сумма платежа", 0)),
+                "category": trans.get("Категория", ""),
+                "description": trans.get("Описание", ""),
+            }
+        )
 
     return {"top_transactions": top}

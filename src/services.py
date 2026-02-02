@@ -40,5 +40,3 @@ def find_number(data_call: List[Dict]) -> List[Dict]:
     except Exception as ex:
         logger.error(f"Ошибка: Файл {data_call} {ex}.")
         return f"Ошибка: Файл {data_call} {ex}."
-
-
