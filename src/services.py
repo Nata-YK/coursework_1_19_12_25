@@ -24,7 +24,7 @@ def find_number(data_call: List[Dict]) -> List[Dict]:
         pattern = re.compile(r"(\+?7\s?\d{3}\s\d{2,3}-\d{2}-\d{2})")
         new_list_number = []
         for number in data_call:
-            logger.info("Получаем описание, преобразуем в строку для безопасности")
+            logger.info("Получаем описание, преобразуем в строку для безопасности.")
             description = str(number.get("Описание", ""))
             logger.info("Ищем номер в любой части строки")
             if pattern.search(description):
